@@ -1,0 +1,11 @@
+0  add  r2,r0,r0  (r2 = 0)
+1  addi r2,r2,-1  (r2 = -1)
+2  add  r1,r0,r0  (r1 = 0) 
+3  addi r1,r1,10  (r1 = 10)
+4  slt  r3,r2,r1  (if (r2 < r1) {r3 = 1})
+5  beq  r3,r0,2   (if (r3 == 0) {PC = PC + 1 + 2 = 8})
+6  addi r1,r1,-1  (r1 = r1 - 1)
+7  j    4         (PC = 4)
+8  sub  r4,r1,r1  (r4 = 0)
+9  or   r5,r4,r3  (r5 = 0)
+10 halt
